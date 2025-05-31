@@ -30,31 +30,23 @@
             overflow: hidden;
         }
 
-        img {
-            position: absolute;
-            inset: 0;
-            object-fit: cover;
-            background-image: url(as.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+        #background-video {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -1;
+          object-fit: cover;
         }
-
-        @media only screen and (max-width: 600px) {
-          img {
-              inset: auto;
-          }
-          body {
-            background-image: url(sa.jpg);
-            background-position: 25% 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-              }
-    }
+        
     </style>
 </head>
 <body>
-    <img src="">
+    <video autoplay muted loop id="background-video">
+      <source src="/schwiiz.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
